@@ -5,5 +5,6 @@ RUN pip install -r requirements.txt
 COPY . /code/.
 RUN --mount=type=secret,id=ACCESS_KEY \
     --mount=type=secret,id=ACCESS_TOKEN \
-    cat /run/secrets/ACCESS_KEY
+    echo "$(cat /run/secrets/ACCESS_KEY) | $(cat /run/secrets/ACCESS_TOKEN)" \
+      > /code/dont-do-this.txt
 CMD ["python", "server.py"]
