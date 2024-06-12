@@ -1,4 +1,5 @@
 from datetime import datetime
+import os
 
 from flask import Flask
 
@@ -8,7 +9,9 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     print("new web request")
-    return f"hello from disco7!!! the datetime is {datetime.now()}"
+    return f"""<p>hello from disco7!!!
+               <br>the datetime is {datetime.now()}
+               <br>the commit is {os.getenv("DISCO_COMMIT")}</p>"""
 
 
 if __name__ == "__main__":
