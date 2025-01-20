@@ -1,1 +1,2 @@
+#!/bin/bash
 echo $DISCO_DEPLOYMENT_NUMBER
