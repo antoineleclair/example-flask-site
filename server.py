@@ -1,3 +1,4 @@
+import uuid
 from datetime import datetime
 import os
 
@@ -5,6 +6,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
+proc_id = uuid.uuid4().hex
 
 @app.route("/")
 def hello_world():
@@ -12,7 +14,8 @@ def hello_world():
     return f"""<p>hello from disco7!!!
                <br>the datetime is {datetime.now()}
                <br>the commit is {os.getenv("DISCO_COMMIT")}
-               <br>the deployment number is {os.getenv("DISCO_DEPLOYMENT_NUMBER")}</p>"""
+               <br>the deployment number is {os.getenv("DISCO_DEPLOYMENT_NUMBER")}
+               <br>process {proc_id}</p>"""
 
 
 if __name__ == "__main__":
