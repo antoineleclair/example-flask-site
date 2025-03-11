@@ -1,0 +1,12 @@
+{
+    "version": "1.0",
+    "services": {
+        "web": {
+            "port": 8080
+        },
+        "hook:deploy:start:after": {
+            "type": "command",
+            "command": "./after-alt.sh"
+        }
+    }
+}
