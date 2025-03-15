@@ -4,6 +4,11 @@
         "web": {
             "port": 8080
         },
+        "cron_minute": {
+            "type": "cron",
+            "schedule": "* * * * *",
+            "command": "echo test"
+        },
         "hook:deploy:start:after": {
             "type": "command",
             "command": "./after.sh"
