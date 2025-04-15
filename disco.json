@@ -6,7 +6,7 @@
         },
         "hook:deploy:start:after": {
             "type": "command",
-            "command": "echo '$DISCO_DEPLOYMENT_NUMBER 123123'"
+            "command": "./after.sh"
         }
     }
 }
