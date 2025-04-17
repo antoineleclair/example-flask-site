@@ -4,7 +4,7 @@
         "web": {
             "port": 8080,
             "health": {
-                "command": "curl --fail http://localhost/health || exit 1"
+                "command": "curl --fail http://localhost:8080/health || exit 1"
             }
         },
         "hook:deploy:start:after": {
