@@ -20,7 +20,7 @@ def hello_world():
 
 @app.route("/health")
 def health():
-    print("HEALTH!!!")
+    print("HEALTH!!")
     return "OK"
 
 
