@@ -2,10 +2,7 @@
     "version": "1.0",
     "services": {
         "web": {
-            "port": 8080,
-            "health": {
-                "command": "curl --fail http://localhost:8080/health || exit 1"
-            }
+            "port": 8080
         },
         "hook:deploy:start:after": {
             "type": "command",
