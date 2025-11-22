@@ -3,7 +3,7 @@
     "services": {
         "web": {
             "port": 8080,
-            "extraSwarmParams": "--container-label itworked=true"
+            "extraSwarmParams": "--label italsoworked=123 --container-label itworked=true"
         },
         "hook:deploy:start:after": {
             "type": "command",
