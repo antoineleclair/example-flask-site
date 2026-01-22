@@ -11,7 +11,7 @@ proc_id = uuid.uuid4().hex
 @app.route("/")
 def hello_world():
     print("new web request")
-    return f"""<p>hello from disco7
+    return f"""<p>hello from disco8
                <br>the datetime is {datetime.now()}
                <br>the commit is {os.getenv("DISCO_COMMIT")}
                <br>the deployment number is {os.getenv("DISCO_DEPLOYMENT_NUMBER")}
